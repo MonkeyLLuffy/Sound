@@ -1,12 +1,17 @@
 package com.example.monkeyllyffy.sound;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Chronometer;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -14,7 +19,23 @@ public class MainActivity extends ActionBarActivity {
     private Button bntRecord;
     private View rcChat_popup;
     private ImageView volume;
+    private LinearLayout voice_rcd_hint_rcding,sound_file;
+    TextView txtName;
+    Chronometer timedown;
 
+
+
+
+
+    ImageButton use_bnt;
+    private String voiceName;
+
+
+
+
+    private Util mSensor;
+
+    private Handler mHandler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
